@@ -1,5 +1,8 @@
-import card from './images/card.svg';
+import "./style/style.css";
 
+import {funTest} from "./pages/home";
+
+const contextSelector = document.querySelector("#content");
 
 const createHeader = function () {
     const content = document.querySelector('#content');
@@ -27,14 +30,51 @@ const createHeader = function () {
     aboutButton.textContent = "About";
 }
 
+const createContainer = () => {
+    const contDiv = document.createElement("div");
+
+    contDiv.setAttribute("id", "container");
+    contextSelector.appendChild(contDiv);
+}
+
+const createFooter = () => {
+    const footDiv = document.createElement("div");
+    
+    footDiv.setAttribute("id", "footer");
+    contextSelector.appendChild(footDiv);
+
+    footDiv.textContent = "sgdsg";
+}
+
 createHeader();
+createContainer();
+createFooter();
+
 
 const homeButton = document.querySelector("#home");
 const aboutButton = document.querySelector("#about");
 const menuButton = document.querySelector("#menu");
 
 
-homeButton.addEventListener
+
+funTest();
+
+
+
+
+/**
+ * 
+ * How we want to load a page
+ * 
+ * Click Button (home about menu)
+ * Delete Children within context
+ * Load page within context
+ */
+
+
+
+
+
 
 
 
