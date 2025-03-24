@@ -38,6 +38,18 @@ const createHeader = function () {
         containerDiv.replaceChildren();
       })
     );
+
+    homeButton.addEventListener("click", () => {
+        homePage();
+    });
+    
+    menuButton.addEventListener("click", () => {
+        menuPage();
+    });
+
+    aboutButton.addEventListener("click", () => {
+        // aboutPage();
+    });
   }
 
   createButtons();
@@ -69,15 +81,7 @@ homePage();
 const menuButton = document.querySelector("#menu");
 const homeButton = document.querySelector("#home");
 
-homeButton.addEventListener("click", () => {
-    const containerDiv = document.querySelector("#container");
-    homePage();
-});
 
-menuButton.addEventListener("click", () => {
-    const containerDiv = document.querySelector("#container");
-    menuPage();
-});
 
 
 /**
