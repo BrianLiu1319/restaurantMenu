@@ -1,4 +1,4 @@
-import eevee from "../images/Eevee_Latte.png"
+import eevee from "../images/drinks/Eevee_Latte.png"
 
 const menuPage = () => {
     const contSelector = document.querySelector("#container");

@@ -72,12 +72,14 @@ const homeButton = document.querySelector("#home");
 homeButton.addEventListener("click", () => {
     const containerDiv = document.querySelector("#container");
     homePage();
-})
+});
 
 menuButton.addEventListener("click", () => {
     const containerDiv = document.querySelector("#container");
     menuPage();
-})
+});
+
+
 /**
  *
  * How we want to load a page
