@@ -1,24 +1,25 @@
 import "./style/style.css";
 
-import {funTest} from "./pages/home";
+import { homePage } from "./pages/home.js";
+import { menuPage } from "./pages/menu.js";
 
 const contextSelector = document.querySelector("#content");
 
 const createHeader = function () {
-    const content = document.querySelector('#content');
+  const content = document.querySelector("#content");
+  const header = document.createElement("header");
+  const nav = document.createElement("nav");
 
-    const header = document.createElement('header');
-    const nav = document.createElement('nav');
-
-    const menuButton = document.createElement('button');
-    const aboutButton = document.createElement('button');
-    const homeButton = document.createElement('button');
+  function createButtons() {
+    const menuButton = document.createElement("button");
+    const aboutButton = document.createElement("button");
+    const homeButton = document.createElement("button");
 
     menuButton.id = "menu";
     homeButton.id = "home";
     aboutButton.id = "about";
 
-    nav.appendChild(homeButton)
+    nav.appendChild(homeButton);
     nav.appendChild(menuButton);
     nav.appendChild(aboutButton);
 
@@ -28,54 +29,60 @@ const createHeader = function () {
     menuButton.textContent = "Menu";
     homeButton.textContent = "Home";
     aboutButton.textContent = "About";
-}
+
+    const buttonList = [homeButton, menuButton, aboutButton];
+
+    buttonList.forEach((e) =>
+      e.addEventListener("click", () => {
+        const containerDiv = document.querySelector("#container");
+        containerDiv.replaceChildren();
+      })
+    );
+  }
+
+  createButtons();
+};
 
 const createContainer = () => {
-    const contDiv = document.createElement("div");
+  const contDiv = document.createElement("div");
 
-    contDiv.setAttribute("id", "container");
-    contextSelector.appendChild(contDiv);
-}
+  contDiv.setAttribute("id", "container");
+  contextSelector.appendChild(contDiv);
+};
 
 const createFooter = () => {
-    const footDiv = document.createElement("div");
-    
-    footDiv.setAttribute("id", "footer");
-    contextSelector.appendChild(footDiv);
+  const footDiv = document.createElement("div");
 
-    footDiv.textContent = "sgdsg";
-}
+  footDiv.setAttribute("id", "footer");
+  contextSelector.appendChild(footDiv);
+
+  footDiv.textContent = "sgdsg";
+};
 
 createHeader();
 createContainer();
 createFooter();
 
+homePage();
 
-const homeButton = document.querySelector("#home");
-const aboutButton = document.querySelector("#about");
+
 const menuButton = document.querySelector("#menu");
+const homeButton = document.querySelector("#home");
 
+homeButton.addEventListener("click", () => {
+    const containerDiv = document.querySelector("#container");
+    homePage();
+})
 
-
-funTest();
-
-
-
-
+menuButton.addEventListener("click", () => {
+    const containerDiv = document.querySelector("#container");
+    menuPage();
+})
 /**
- * 
+ *
  * How we want to load a page
- * 
+ *
  * Click Button (home about menu)
  * Delete Children within context
  * Load page within context
  */
-
-
-
-
-
-
-
-
-
