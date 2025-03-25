@@ -37,7 +37,7 @@ const createHeader = function () {
         const containerDiv = document.querySelector("#container");
         containerDiv.replaceChildren();
       })
-    );
+    );  
 
     homeButton.addEventListener("click", () => {
         homePage();
@@ -75,7 +75,9 @@ createHeader();
 createContainer();
 createFooter();
 
-homePage();
+// homePage();
+menuPage();
+
 
 
 const menuButton = document.querySelector("#menu");

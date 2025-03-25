@@ -1,0 +1,30 @@
+#container {
+    display: inline-block;
+}
+
+
+li {
+    list-style: none;
+    display:flex;
+    height: 10vh;
+    width: 10vh;
+    padding: 50px;
+
+    justify-content: center;
+    align-self: center;
+}
+
+#itemCont {
+    padding: 10px;
+}
+
+
+
+#drinkCont {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fill, 1fr);
+    grid-template-rows: 1fr 1fr;
+    border: 10px grey;
+} 
+

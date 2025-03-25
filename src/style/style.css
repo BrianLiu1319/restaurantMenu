@@ -7,13 +7,14 @@ body {
     width: 100vw;
     display:grid;
     
-    grid-template-rows: 1fr 10fr 1fr;
+    grid-template-rows: 10vh 10fr 10vh;
 
 }
 
 #container {
     height: 100%;
-    background-color: blueviolet;
+    width: 100%;
+    background-color: rgb(68, 42, 42);
     border: solid black;
 }
 
