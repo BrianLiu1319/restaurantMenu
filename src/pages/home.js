@@ -3,10 +3,13 @@ import "../style/homeStyle.css";
 import pokeTitle from "../images/pokemonTitle.png";
 
 const homePage = () => {
+  const containerDiv = document.querySelector("#container");
+  containerDiv.setAttribute("class", "home");
+
   const contSelector = document.querySelector("#container");
   const itemsSelector = document.createElement("div");
   itemsSelector.id = "items";
-  
+
   contSelector.appendChild(itemsSelector);
 
   const imgElement = document.createElement("img");

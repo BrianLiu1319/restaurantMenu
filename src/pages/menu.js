@@ -1,4 +1,3 @@
-import "../style/menuStyle.css";
 
 import eeveeDrink from "../images/drinks/Eevee_Latte.png"
 import brionneDrink from "../images/drinks/Bouncy_Brionne_Soda.png"
@@ -22,6 +21,9 @@ function createCard (srcImg) {
 }
 
 const menuPage = () => {
+    const containerDiv = document.querySelector("#container");
+    containerDiv.setAttribute('class', 'menu');
+
     const contSelector = document.querySelector("#container");
     const itemCont = document.createElement("div");
     itemCont.id = "itemCont";
@@ -29,40 +31,41 @@ const menuPage = () => {
     contSelector.appendChild(itemCont);
 
     const createItemCategories = () => {
-        const foodItem = document.createElement("div");
-        foodItem.id = "food";
+        // const foodItem = document.createElement("div");
+        // foodItem.id = "food";
         const drinkItem = document.createElement("div");
         drinkItem.id = "drink";
-        const snackItem = document.createElement("div");
-        snackItem.id = "snack";
+        // const snackItem = document.createElement("div");
+        // snackItem.id = "snack";
     
         const drinkTitle = document.createElement("h1");
         drinkTitle.textContent = "Drinks";
         drinkItem.appendChild(drinkTitle);
-        const foodTitle = document.createElement("h1");
-        foodTitle.textContent = "Food";
-        foodItem.appendChild(foodTitle);
-        const snackTitle = document.createElement("h1");
-        snackTitle.textContent = "Snacks";
-        snackItem.appendChild(snackTitle);
+        // const foodTitle = document.createElement("h1");
+        // foodTitle.textContent = "Food";
+        // foodItem.appendChild(foodTitle);
+        // const snackTitle = document.createElement("h1");
+        // snackTitle.textContent = "Snacks";
+        // snackItem.appendChild(snackTitle);
 
         const drinkCont = document.createElement("ul");
         drinkCont.id = "drinkCont"
-        const foodCont = document.createElement("div");
-        foodCont.id = "foodCont"
-        const snackCont = document.createElement("div");
-        snackCont.id = "snackCont"
+        // const foodCont = document.createElement("div");
+        // foodCont.id = "foodCont"
+        // const snackCont = document.createElement("div");
+        // snackCont.id = "snackCont"
 
         drinkItem.appendChild(drinkCont);
-        foodItem.appendChild(foodCont);
-        snackItem.appendChild(snackCont);
+        // foodItem.appendChild(foodCont);
+        // snackItem.appendChild(snackCont);
 
 
         itemCont.appendChild(drinkItem);
-        itemCont.appendChild(foodItem);
-        itemCont.appendChild(snackItem);
+        // itemCont.appendChild(foodItem);
+        // itemCont.appendChild(snackItem);
 
-        return {drinkCont, foodCont, snackCont}
+        // return {drinkCont, foodCont, snackCont}
+        return drinkCont;
     }
 
     createItemCategories();

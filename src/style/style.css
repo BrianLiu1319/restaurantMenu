@@ -1,6 +1,13 @@
-body {
-    background-color: grey;
-}
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Quicksand:wght@400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+  
+    font-family: 'Noto Serif HK', sans-serif;
+                                                  
+  }
+
 
 #content{
     height: 100vh;
@@ -14,16 +21,38 @@ body {
 #container {
     height: 100%;
     width: 100%;
+
+    background-image: url("../images/cafeBackground.jpg");
     background-color: rgb(68, 42, 42);
-    border: solid black;
 }
 
 header {
-    border: solid black;
+    background-color: #116294;
+
+    display:flex;
+    justify-content: center;
+    width: 100%;
+
+}
+
+nav {
+    display: flex;
+    border-bottom: solid  #FFD700;
+
 }
 
 #footer {
     height: 100%;
-    background-color: green;
-    border: solid black;
+    background-color: #00416a;
 }
+
+button {
+    border: none;
+    padding: 15px 32px;
+    font-size: 30px;
+    cursor: pointer;
+    background: none;
+    color: white;
+
+  }
+  

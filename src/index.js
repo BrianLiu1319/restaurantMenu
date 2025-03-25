@@ -3,6 +3,11 @@ import "./style/style.css";
 import { homePage } from "./pages/home.js";
 import { menuPage } from "./pages/menu.js";
 
+import menuStyle from "./style/menuStyle.css"
+
+
+
+
 const contextSelector = document.querySelector("#content");
 
 const createHeader = function () {
@@ -15,9 +20,9 @@ const createHeader = function () {
     const aboutButton = document.createElement("button");
     const homeButton = document.createElement("button");
 
-    menuButton.id = "menu";
-    homeButton.id = "home";
-    aboutButton.id = "about";
+    menuButton.id = "menuButton";
+    homeButton.id = "homeButton";
+    aboutButton.id = "aboutButton";
 
     nav.appendChild(homeButton);
     nav.appendChild(menuButton);
@@ -39,8 +44,12 @@ const createHeader = function () {
       })
     );  
 
+
     homeButton.addEventListener("click", () => {
         homePage();
+
+
+
     });
     
     menuButton.addEventListener("click", () => {
@@ -48,6 +57,9 @@ const createHeader = function () {
     });
 
     aboutButton.addEventListener("click", () => {
+        const containerDiv = document.querySelector("#container");
+        containerDiv.setAttribute('class', 'about');
+
         // aboutPage();
     });
   }
@@ -75,8 +87,8 @@ createHeader();
 createContainer();
 createFooter();
 
-// homePage();
-menuPage();
+homePage();
+// menuPage();
 
 
 
