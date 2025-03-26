@@ -66,4 +66,23 @@ button {
 }
 
 
+/** pikachu corner **/
 
+#pikachuDiv {
+    display:flex;
+    
+}
+
+#pikachu {
+
+
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+
+    height: 20vh;
+
+
+
+  
+}   

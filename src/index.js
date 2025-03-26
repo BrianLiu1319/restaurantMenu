@@ -5,7 +5,7 @@ import { menuPage } from "./pages/menu.js";
 import { aboutPage } from "./pages/about.js";
 
 import github from "./images/github.png";
-
+import pika from "./images/Pikachu.png";
 
 
 const contextSelector = document.querySelector("#content");
@@ -83,8 +83,31 @@ const createFooter = () => {
     githubImg.src = github;
     githubImg.id = "github";
     githubLink.href = "https://github.com/BrianLiu1319/";
-    githubLink.appendChild(githubImg)
+    githubLink.appendChild(githubImg);
     footDiv.appendChild(githubLink);
+};
+
+const pikachuCorner = () => {
+    const bodySelector = document.querySelector("#footer")
+    const pikachuDiv = document.createElement("div");
+    const pikachu = document.createElement("img");
+
+    pikachuDiv.id = "pikachuDiv";
+    pikachu.src = pika;
+    pikachu.id = "pikachu";
+
+    const body = document.documentElement
+
+    body.addEventListener('mousemove', (e) => {
+      const x = e.clientX,
+            y = e.clientY;
+      pikachu.style.transform = `translate(${-x / 250}px,${-y / 300}px)`;
+    });
+
+    pikachuDiv.appendChild(pikachu);
+    bodySelector.appendChild(pikachuDiv);
+
+
 
 };
 
@@ -92,9 +115,9 @@ createHeader();
 createContainer();
 createFooter();
 
+pikachuCorner();
+
 homePage();
-
-
 
 /**
  *
