@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Quicksand:wght@400;500;600&display=swap");
+@import url("https://fonts.cdnfonts.com/css/public-pixel");
 
 * {
     padding: 0;
     margin: 0;
-    font-family: "Noto Serif HK", sans-serif;
+    font-family: "Public Pixel", sans-serif;
 }
 
 #content {
@@ -46,3 +47,22 @@ button {
     background: none;
     color: white;
 }
+
+
+/** footer **/
+
+#footer {
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+#github {
+    height: 2em;
+    padding: 1.5em;
+}
+
+
+

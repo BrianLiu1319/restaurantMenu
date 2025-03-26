@@ -1,0 +1,22 @@
+#aboutDiv{
+    color: white;
+
+    background: rgb(136, 136, 221, 0.9);
+    color: white;
+    border: solid thin white;
+    padding: 30px;
+    margin: 30px;
+
+    font-size: 20px;
+    width: 66%;
+    border-radius: 20px;
+}
+
+.about {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+

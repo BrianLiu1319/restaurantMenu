@@ -8,14 +8,27 @@ import pachirisuDrink from "../images/drinks/Poppin 27_Pachirisu_Float.png";
 import furretDrink from "../images/drinks/Roasted_Furret_Tea_Latte.png";
 import teddiursaDrink from "../images/drinks/Teddiursa_Iced_Coffee.png";
 
-function createCard(srcImg) {
+import "../style/menuStyle.css";
+
+function createCard(srcImg, price) {
     const card = document.createElement("li");
-
     const img = document.createElement("img");
+    const priceCard = document.createElement("h1");
+    const pair = document.createElement("div");
     img.src = srcImg;
-    card.id = String(srcImg);
+    img.id = "drinkItem";
 
-    card.appendChild(img);
+    pair.appendChild(img);
+    pair.appendChild(priceCard);
+
+    priceCard.textContent = price;
+    priceCard.id = "price";
+
+    card.id = String(srcImg);
+    pair.id = "pair";
+
+    card.appendChild(pair);
+
     return card;
 }
 
@@ -80,10 +93,24 @@ const menuPage = () => {
         teddiursaDrink,
     ];
 
+    const drinkPrice = [
+        "$6",
+        "$5",
+        "$7.50",
+        "$4",
+        "$6.50",
+        "$6",
+        "$10",
+        "$6",
+        "$5",
+    ];
+
     const cardList = [];
-    drinks.forEach((i) => {
-        cardList.push(createCard(i));
-    });
+
+    for (let i = 0; i < drinks.length; i++) {
+        cardList.push(createCard(drinks[i], drinkPrice[i]));
+    }
+
     cardList.forEach((i) => {
         drinkCont.append(i);
     });

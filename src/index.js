@@ -2,8 +2,11 @@ import "./style/style.css";
 
 import { homePage } from "./pages/home.js";
 import { menuPage } from "./pages/menu.js";
+import { aboutPage } from "./pages/about.js";
 
-import menuStyle from "./style/menuStyle.css";
+import github from "./images/github.png";
+
+
 
 const contextSelector = document.querySelector("#content");
 
@@ -53,7 +56,7 @@ const createHeader = function () {
             const containerDiv = document.querySelector("#container");
             containerDiv.setAttribute("class", "about");
 
-            // aboutPage();
+            aboutPage();
         });
     }
 
@@ -73,7 +76,16 @@ const createFooter = () => {
     footDiv.setAttribute("id", "footer");
     contextSelector.appendChild(footDiv);
 
-    footDiv.textContent = "sgdsg";
+    footDiv.textContent = "Made with ❤︎";
+
+    const githubLink = document.createElement("a");
+    const githubImg = document.createElement("img");
+    githubImg.src = github;
+    githubImg.id = "github";
+    githubLink.href = "https://github.com/BrianLiu1319/";
+    githubLink.appendChild(githubImg)
+    footDiv.appendChild(githubLink);
+
 };
 
 createHeader();
@@ -81,10 +93,8 @@ createContainer();
 createFooter();
 
 homePage();
-// menuPage();
 
-const menuButton = document.querySelector("#menu");
-const homeButton = document.querySelector("#home");
+
 
 /**
  *
