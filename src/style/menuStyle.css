@@ -11,9 +11,10 @@ li {
 
     justify-content: center;
     align-self: center;
-    background-color: rgba(91, 155, 192, 0.9);
+    background: rgb(136, 136, 221, 0.9);
     margin-bottom: 20px;
     border-radius: 30px;
+    border: thin solid white;
 
 }
 
@@ -42,12 +43,12 @@ h1 {
     color: white;
     padding: 20px;
 }
+
 #drinkCont {
     display: grid;
     grid-auto-flow: row;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(auto-fit, 1fr);
-    border: 10px grey;
 }
 
 #price {

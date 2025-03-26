@@ -52,6 +52,7 @@ button {
 /** footer **/
 
 #footer {
+    border-top: solid #ffd700;
     color:white;
     display: flex;
     justify-content: center;
