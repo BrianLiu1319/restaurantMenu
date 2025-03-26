@@ -1,11 +1,10 @@
-#container.menu{
+#container.menu {
     display: inline-block;
 }
 
-
 li {
     list-style: none;
-    display:flex;
+    display: flex;
     height: 10vh;
     width: 10vh;
     padding: 50px;
@@ -15,21 +14,18 @@ li {
 }
 
 #itemCont {
-    display:grid;
+    display: grid;
     /* grid-template-rows: 1fr 1fr 1fr; */
     grid-template-rows: 1fr;
-
 
     padding: 10px;
 }
 
 li {
-    background-color: rgb(132, 134, 189, .9);
+    background-color: rgb(132, 134, 189, 0.9);
     margin-bottom: 20px;
     border-radius: 100px;
 }
-
-
 
 #drinkCont {
     display: grid;
@@ -37,5 +33,4 @@ li {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(auto-fit, 1fr);
     border: 10px grey;
-} 
-
+}

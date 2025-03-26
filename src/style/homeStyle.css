@@ -1,5 +1,5 @@
-#container.home{
-    display:flex;
+#container.home {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -10,9 +10,9 @@
 }
 
 #description {
-    display:flex;
+    display: flex;
     justify-self: center;
-    background: rgb(136, 136, 221, .9);
+    background: rgb(136, 136, 221, 0.9);
     color: white;
     border: solid thin white;
     padding: 30px;

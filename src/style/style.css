@@ -1,44 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Quicksand:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Quicksand:wght@400;500;600&display=swap");
 
 * {
     padding: 0;
     margin: 0;
-  
-    font-family: 'Noto Serif HK', sans-serif;
-                                                  
-  }
+    font-family: "Noto Serif HK", sans-serif;
+}
 
-
-#content{
+#content {
     height: 100vh;
     width: 100vw;
-    display:grid;
-    
-    grid-template-rows: 10vh 10fr 10vh;
+    display: grid;
 
+    grid-template-rows: 10vh 10fr 10vh;
 }
 
 #container {
     height: 100%;
     width: 100%;
-
     background-image: url("../images/cafeBackground.jpg");
     background-color: rgb(68, 42, 42);
 }
 
 header {
     background-color: #116294;
-
-    display:flex;
+    display: flex;
     justify-content: center;
     width: 100%;
-
 }
 
 nav {
     display: flex;
-    border-bottom: solid  #FFD700;
-
+    border-bottom: solid #ffd700;
 }
 
 #footer {
@@ -53,6 +45,4 @@ button {
     cursor: pointer;
     background: none;
     color: white;
-
-  }
-  
+}

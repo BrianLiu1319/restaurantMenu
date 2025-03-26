@@ -3,28 +3,28 @@ import "../style/homeStyle.css";
 import pokeTitle from "../images/pokemonTitle.png";
 
 const homePage = () => {
-  const containerDiv = document.querySelector("#container");
-  containerDiv.setAttribute("class", "home");
+    const containerDiv = document.querySelector("#container");
+    containerDiv.setAttribute("class", "home");
 
-  const contSelector = document.querySelector("#container");
-  const itemsSelector = document.createElement("div");
-  itemsSelector.id = "items";
+    const contSelector = document.querySelector("#container");
+    const itemsSelector = document.createElement("div");
+    itemsSelector.id = "items";
 
-  contSelector.appendChild(itemsSelector);
+    contSelector.appendChild(itemsSelector);
 
-  const imgElement = document.createElement("img");
-  imgElement.src = pokeTitle;
-  imgElement.alt = "pokemon cafe";
+    const imgElement = document.createElement("img");
+    imgElement.src = pokeTitle;
+    imgElement.alt = "pokemon cafe";
 
-  const descDiv = document.createElement("div");
+    const descDiv = document.createElement("div");
 
-  itemsSelector.appendChild(imgElement);
-  itemsSelector.appendChild(descDiv);
+    itemsSelector.appendChild(imgElement);
+    itemsSelector.appendChild(descDiv);
 
-  descDiv.id = "description";
+    descDiv.id = "description";
 
-  descDiv.textContent =
-    "Welcome to the Pokemon Cafe! Enjoy original sweets, \
+    descDiv.textContent =
+        "Welcome to the Pokemon Cafe! Enjoy original sweets, \
     drinks and meals inspired by Pokemon while surrounded by \
     your favorite Pokemon!";
 };
